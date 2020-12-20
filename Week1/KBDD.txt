@@ -1,0 +1,9 @@
+boolean a b cin d0 d1 d2 d3
+eval cout a&b+(a+b)&cin
+eval repair a&b + (d0&!a&!b + d1&!a&b + d2&a&!b + d3&a&b)&cin
+eval Z repair&cout + !repair&!cout
+quantify u ForallZ Z a b cin
+sop ForallZ
+satisfy ForallZ
+quit
+

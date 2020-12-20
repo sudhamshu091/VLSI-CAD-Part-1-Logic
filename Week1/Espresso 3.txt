@@ -1,0 +1,27 @@
+.mv 8 5 -10 -10 6
+ .ilb io1 io0 init swr mack
+ .ob wait minit mrd sack mwr dli
+ .type fr
+ .kiss
+ --1-- - init0 110000
+ --1-- init0 init0 110000
+ --0-- init0 init1 110000
+ --00- init1 init1 110000
+ --01- init1 init2 110001
+ --0-- init2 init4 110100
+ --01- init4 init4 110100
+ --00- init4 iowait 000000
+ 0000- iowait iowait 000000
+ 1000- iowait init1 110000
+ 01000 iowait read0 101000
+ 11000 iowait write0 100010
+ 01001 iowait rmack 100000
+ 11001 iowait wmack 100000
+ --01- iowait init2 110001
+ --0-0 rmack rmack 100000
+ --0-1 rmack read0 101000
+ --0-0 wmack wmack 100000
+ --0-1 wmack write0 100010
+ --0-- read0 read1 101001
+ --0-- read1 iowait 000000
+ --0-- write0 iowait 000000

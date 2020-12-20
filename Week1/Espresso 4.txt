@@ -1,0 +1,42 @@
+i 15
+.o 4
+.ilb SeqActive<0> CacheOp<6> CacheOp<5> CacheOp<4>
+	CacheOp<3> CacheOp<2> CacheOp<1> CacheOp<0>
+	userKernel<0> Protection<1> Protection<0>
+	cacheState<1> cacheState<0> PageDirty<0>
+	WriteCycleIn<0>
+.ob CacheBusy<0> dataMayBeValid<0> dataIsValid<0>
+	WriteCycleOut<0>
+.symbolic CacheOp<6> CacheOp<5> CacheOp<4> CacheOp<3>
+ 	CacheOp<2> CacheOp<1> CacheOp<0> ;
+ 	FET NA PHY_FET PR32 PRE_FET PW32 RA32 RD32
+ 	RD64 RDCACHE RFO32 RFO64 TS32 WR32 WR64 WRCACHE ;
+.symbolic Protection<1> Protection<0> ;
+ 	PROT_KRO_UNA PROT_KRW_UNA PROT_KRW_URO PROT_KRW_URW ;
+.symbolic cacheState<1> cacheState<0> ;
+ 	CS_Invalid CS_OwnPrivate CS_OwnShared CS_UnOwned ;
+.p 22
+ 0000001--010110 0001
+ 0000001-1-00110 0001
+ 00001011-01011- 0100
+ 000010111-0011- 0100
+ 0000--001--01-- 0100
+ 0000-10--0-1--- 0100
+ 0000-10-1--1--- 0100
+ 00000-0--0-1--- 0100
+ 00000-0-1--1--- 0100
+ 0000-10--0--1-- 0100
+ 0000-10-1---1-- 0100
+ 00000-0--0--1-- 0100
+ 00000-0-1---1-- 0100
+ ---1----------- 1000
+ --1------------ 1000
+ -1------------- 1000
+ 1-------------- 1000
+ -------0------- 1000
+ ----1---------- 1000
+ -----0--------- 1000
+ ------0-------- 1000
+ --------------1 1110
+
+.e
