@@ -17,31 +17,7 @@ Ans:Fywˉ=x+xˉz
 Question 3
 Problem 2: Alternative Shannon Expansion Formulas
 There are other ways of representing the Shannon Expansion theorem. The version we gave you – F(x_1, \ldots x_i, \ldots x_n) = x_i \bullet F(x_i=1) + \bar{x_i} \bullet F(x_i=0)F(x 
-1
-​	
- ,…x 
-i
-​	
- ,…x 
-n
-​	
- )=x 
-i
-​	
- ∙F(x 
-i
-​	
- =1)+ 
-x 
-i
-​	
- 
-ˉ
-​	
- ∙F(x 
-i
-​	
- =0) can be thought of as a “sum of products” form, since the equation is an OR (sum) of two small AND (product) terms. But there must be a "product of sums" form for the Shannon expansion. And perhaps even other forms that use Boolean algebra to express this idea in a different way.
+1,…xi,…xn)=xi∙F(xi=1)+xi ∙F(xi=0) can be thought of as a “sum of products” form, since the equation is an OR (sum) of two small AND (product) terms. But there must be a "product of sums" form for the Shannon expansion. And perhaps even other forms that use Boolean algebra to express this idea in a different way.
 
 Use Boolean algebra, and the basic properties of cofactors, and tell us which of these equations is a correct alternate form of the Shannon Expansion. Please select all correct answers.
 
@@ -58,8 +34,7 @@ There may be more than one correct answer; select all correct equations.
 
 (Reminder: p \oplus q=p\bar{q} +\bar{p}qp⊕q=pqˉ+pˉq. Think: p \oplus pp⊕p = what? p \oplus \bar{p}p⊕ pˉ= what?)
 \frac{\partial F}{\partial y} = 0 
-Ans:∂y
-    ∂F=0 and this means that function FF does not depend on input yy
+Ans:∂y/∂F=0 and this means that function FF does not depend on input yy
 5.
 Question 5
 Problem 3: Using the Boolean Difference - 2
@@ -132,22 +107,7 @@ Ans:We can compute GG as (\exists S1S0x,R)[E1,E0](∃S1S0x,R)[E1,E0] because all
 Question 10
 Problem 7: Unate Functions
 Consider this Boolean function F(x,y,z,w)=(xy\bar{w}+\bar{y}\bar{z}+xz\bar{w}+yz\bar{w})F(x,y,z,w)=(xy 
-w
-ˉ
- + 
-y
-ˉ
-​	
-  
-z
-ˉ
- +xz 
-w
-ˉ
- +yz 
-w
-ˉ
- )
+wˉ+yˉz +xzˉwˉ+yz wˉ)
 
 Which of these are true? Select all correct answers.
 Ans:F is positive unate in variable (xx) and negative unate in variable (ww).
@@ -161,27 +121,7 @@ Ans:
 Question 12
 Problem 8: Positional Cube Notation and manipulations
 Consider this Boolean equation F(x,y,z,w) = xy\bar{z}\bar{w} + y + \bar{x}\bar{y}\bar{z}w + x\bar{z}\bar{w}F(x,y,z,w)=xy 
-z
-ˉ
-  
-w
-ˉ
- +y+ 
-x
-ˉ
-  
-y
-ˉ
-​	
-  
-z
-ˉ
- w+x 
-z
-ˉ
-  
-w
-ˉ
+zˉwˉ+y+ xxˉyˉzˉ w+x zˉwˉ
  
 
 If we transform this into PCN form, where each cube is [xx yy zz ww], a set of 2-bit entries for each variable in order, it will become the following list:
