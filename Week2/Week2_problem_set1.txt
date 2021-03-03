@@ -1,0 +1,215 @@
+1.
+Question 1
+Problem 1: Working with Shannon Cofactors
+Let Boolean function F(x,y,z,w) = (xy + \bar{x}z) \oplus wF(x,y,z,w)=(xy+ xˉz)⊕w.
+
+Tell us whether each of the following Boolean equations involving Shannon Cofactors of function F(~)F( ) are true or false. Please select all correct answers.
+
+(Reminder: a⊕b=ab¯+a¯b; think carefully about what equations like (Boolean stuff) \oplus⊕1 and (Boolean stuff) \oplus⊕0 can simplify to.)
+Ans:Fy=(x+xˉz)⊕w
+    Fw=(xˉ+xyˉ+yˉzˉ)
+2.
+Question 2
+Problem 1: Working with shannon cofactors - 2
+This question is a continuation of Problem 1.
+Ans:Fywˉ=x+xˉz
+3.
+Question 3
+Problem 2: Alternative Shannon Expansion Formulas
+There are other ways of representing the Shannon Expansion theorem. The version we gave you – F(x_1, \ldots x_i, \ldots x_n) = x_i \bullet F(x_i=1) + \bar{x_i} \bullet F(x_i=0)F(x 
+1
+​	
+ ,…x 
+i
+​	
+ ,…x 
+n
+​	
+ )=x 
+i
+​	
+ ∙F(x 
+i
+​	
+ =1)+ 
+x 
+i
+​	
+ 
+ˉ
+​	
+ ∙F(x 
+i
+​	
+ =0) can be thought of as a “sum of products” form, since the equation is an OR (sum) of two small AND (product) terms. But there must be a "product of sums" form for the Shannon expansion. And perhaps even other forms that use Boolean algebra to express this idea in a different way.
+
+Use Boolean algebra, and the basic properties of cofactors, and tell us which of these equations is a correct alternate form of the Shannon Expansion. Please select all correct answers.
+
+(Hint: when it doubt, it is always a good idea to just make up a little Boolean equation, then cofactor it by hand, then look at these formulas and see if they “do the right thing” on your little example.)
+
+Ans:[x_i + F(x_i=0)] \bullet [\bar{x_i} + F(x_i=1)][xi+F(xi=0)]∙[ xiˉ+F(x i=1)]
+    [xi⋅F(xi=1)]⊕[xiˉ⋅F(xi=0)]
+4.
+Question 4
+Problem 3: Using the Boolean Difference
+Consider the small logic network shown below. Use the definition of the Boolean Difference and determine which of these equations is correct.
+
+There may be more than one correct answer; select all correct equations.
+
+(Reminder: p \oplus q=p\bar{q} +\bar{p}qp⊕q=pqˉ+pˉq. Think: p \oplus pp⊕p = what? p \oplus \bar{p}p⊕ pˉ= what?)
+\frac{\partial F}{\partial y} = 0 
+Ans:∂y
+    ∂F=0 and this means that function FF does not depend on input yy
+5.
+Question 5
+Problem 3: Using the Boolean Difference - 2
+This question is a continuation of Problem 3.
+
+Ans:∂F/∂a= bˉ⋅x
+6.
+Question 6
+Problem 4: Boolean Quantification
+Looking at the same gate network from Problem 3, tell if each of these Boolean formulas involving quantification operations is true or false. Please select all correct answers.
+
+
+Ans:(∀x,F)[a,b,y]=a+b
+7.
+Question 7
+Problem 4: Boolean Quantification - 2
+This question is a continuation of Problem 4.
+Ans:(∀a,F)[b,x,y]=b+xˉ
+8.
+Question 8
+Problem 5: Boolean Network Repair
+The carry output of a 1-bit adder has the Boolean equation Cout = a \cdot b + (a+b) \cdot CinCout=a⋅b+(a+b)⋅Cin, where aa and bb are the 1-bit numbers we want to add, and CinCin is the input carry bit. Suppose we know that we have implemented the gate-level logic incorrectly, the gate with the “??” label is the one we suspect is incorrect.
+
+Do this: use the logic network repair procedure discussed in lecture; replace the “??” gate with the 4:1 multiplexor shown below, with inputs aa,bb connected to the s1s1,s0s0 select lines. (So, for example, s1s0=10s1s0=10 means q=d2q=d2 for this mux.) Use the quantification procedure, and do the Boolean algebra to see what the result tells you about how to fix it.
+
+Tell us if each of these statements about possible network repair solutions is true or false. Please select all correct answers.
+
+
+Ans:A feasible network repair is to replace the “??” with an EXOR gate.
+    A feasible network repair is to replace the “??” with an OR gate.
+9.
+Question 9
+Problem 6: Using Quantification For Finite State Machine Analysis
+It is very natural to think about representing a finite state machine using some kind of a graph: the nodes represent the states, and the edges represent the transitions from state to state under input changes. The common state diagram notation (see diagram) is exactly this kind of a graph:
+
+
+This machine has four states AA BB CC DD, represented by 2 bits of state (2 flip flops) whose values appear in brackets (e.g., [11] represents state CC) in each state bubble. This machine has just 1 input x. We are ignoring any outputs for this machine.
+
+Unfortunately, these graphs can get very big, very easily. Imagine a state machine with 20 bits of state (20 separate flip flops). It has 220 states ∼ 1,000,000 states. Suppose also there are 20 input variables. Then each of these 1,000,000 states has 1,000,000 transition arrows leaving it. Our little machine with 20 flip flops has one trillion state transitions!
+
+It turns out there is a more elegant way of representing things here. Imagine that we create a new Boolean function, called R, which we call the state transition relation function. In general R has 3 kinds of inputs:
+
+R(state variables for starting state, input variables, state variables for ending state)
+
+The way to think about the R function is that it answers a simple question: can I get from a specific starting state to a specified ending state via specified input value? For our little example, here are a few values of R:
+
+R(AA, 0, BB) = 1 means “Yes, from state AA, an input x=0 takes you to state BB”
+
+R(BB, 1, AA) = 0 means “No, from state BB, input x=1 does NOT take you to AA”
+
+Of course, you can’t just input the state “names”, you have to use the state assignment bits that represent each state. This means that R is a function of 5 variables for our little example:
+
+R( S1, S0, x, E1,E0 ),
+
+where S1 S0 is the state assignment for the starting state, and E1 E0 is the assignment for the ending state. So, for example:
+
+R(AA, 0, BB) = 1 really means that R(0, 0, 0, 0, 1) = 1, since state AA is represented by the assignment S1 S0 = 00, and similarly the state BB has the assignment 01.
+
+You could easily build a truth table for R( ) for this little 4-state example, and create a sum of products Boolean expression for R(S1, S0, x, E1, E0 ) using a 5-variable Kmap, or just ordinary Boolean algebra. All the information you need to build R( ) is available in our state machine design.
+
+Now, let’s create a more interesting function, called G(E1, E0). G is again a function of the states, but it answers a different question: is there ANY way to reach this state E1 E0? For example, it is clear from our little state diagram that G(CC) = 0, i.e., there is just NO way to start from some state and take a transition that gets you to state CC. But G(AA)=1 because it is possible to get to state AA (for example, by being in state CC and taking the x=1 transition).
+
+For a trivial example like our little 4-state machine, you can just look at the right answer. For a real machine, with perhaps billions of states+edges, you cannot just look at the graph. So, answer this: Can we use computational Boolean algebra and transform the R( ) function – which we can build – in the G( ) function, directly?
+
+Consider each of these statements about quantification operations that try to compute this G function. Tell us if these are each true or false. Please select all correct answers.
+
+Ans:We can compute GG as (\exists S1S0x,R)[E1,E0](∃S1S0x,R)[E1,E0] because all we really need to know is that “there exists” some start state (S1S0) and some transition (x) that does lead to this end state (E1E0), and we don’t need to know what those are, just that “they exist”.
+
+10.
+Question 10
+Problem 7: Unate Functions
+Consider this Boolean function F(x,y,z,w)=(xy\bar{w}+\bar{y}\bar{z}+xz\bar{w}+yz\bar{w})F(x,y,z,w)=(xy 
+w
+ˉ
+ + 
+y
+ˉ
+​	
+  
+z
+ˉ
+ +xz 
+w
+ˉ
+ +yz 
+w
+ˉ
+ )
+
+Which of these are true? Select all correct answers.
+Ans:F is positive unate in variable (xx) and negative unate in variable (ww).
+11.
+Question 11
+Problem 7: Unate Functions - 2
+This question is a continuation of Problem 7.
+
+Ans:
+12.
+Question 12
+Problem 8: Positional Cube Notation and manipulations
+Consider this Boolean equation F(x,y,z,w) = xy\bar{z}\bar{w} + y + \bar{x}\bar{y}\bar{z}w + x\bar{z}\bar{w}F(x,y,z,w)=xy 
+z
+ˉ
+  
+w
+ˉ
+ +y+ 
+x
+ˉ
+  
+y
+ˉ
+​	
+  
+z
+ˉ
+ w+x 
+z
+ˉ
+  
+w
+ˉ
+ 
+
+If we transform this into PCN form, where each cube is [xx yy zz ww], a set of 2-bit entries for each variable in order, it will become the following list:
+
+[01 01 10 10], [11 01 11 11], [10 10 10 01], [01 11 10 10]
+
+Tell us if each of the following Shannon Cofactor computations is True or False, starting with this PCN list, using the methods and rules from URP tautology lecture? Please select all correct answers.
+
+Ans:F( y=1y=1) = [01 11 10 10], [11 11 11 11], [01 11 10 10] and this cofactor is unate.  
+13.
+Question 13
+Problem 8: Positional Cube Notation and manipulations - 2
+This question is a continuation of Problem 8.
+Ans:F( z= 1z=1 ) = [11 01 11 11] 
+14.
+Question 14
+Problem 9. Unate Recursive Paradigm algorithm
+Suppose we have these cubes at one node of our URP tautology recursion, and we need to decide on the splitting variable to use to cofactor and recurse. Which variable do we pick, and why?
+
+For each of the following, tell us if the statement about variable selection is True or False. Please select all correct answers.
+
+
+Ans:Variable zz is the most binate variable since it appears in 5 cubes.
+15.
+Question 15
+Problem 10. Unate Recursive Paradigm
+Consider this new cube list over variables x, y, zx,y,z, which appears at one node of our URP tautology algorithm. We select variable xx to split on. Let us consider what happens when we recurse, and call Tautology on the positive xx cofactor.
+
+
+Consider each of the following statements about the cube list that should appear inside the f(x=1)f(x=1) recursive call, highlighted in our figure. Tell us which are true and which are false. Please select all correct answers.
+Ans:The cube list is [11 11 01], [11 11 10], [11 10 11] and it is a tautology.
