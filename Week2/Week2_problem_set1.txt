@@ -101,7 +101,7 @@ For a trivial example like our little 4-state machine, you can just look at the 
 
 Consider each of these statements about quantification operations that try to compute this G function. Tell us if these are each true or false. Please select all correct answers.
 
-Ans:We can compute GG as (\exists S1S0x,R)[E1,E0](∃S1S0x,R)[E1,E0] because all we really need to know is that “there exists” some start state (S1S0) and some transition (x) that does lead to this end state (E1E0), and we don’t need to know what those are, just that “they exist”.
+Ans:We can compute GG as (\exists S1S0x,R)[E1,E0](∃S1S0x,R)[E1,E0] because all we really need to know is that “there exists” some start state (S1S0) and some transition (x) that does lead to this end state (E1E0), and we don’t need to know what those are,just that “they exist”.
 
 10.
 Question 10
