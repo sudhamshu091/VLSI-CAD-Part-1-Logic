@@ -29,7 +29,6 @@ Ans:[x_i + F(x_i=0)] \bullet [\bar{x_i} + F(x_i=1)][xi+F(xi=0)]∙[ xiˉ+F(x i=1
 Question 4
 Problem 3: Using the Boolean Difference
 Consider the small logic network shown below. Use the definition of the Boolean Difference and determine which of these equations is correct.
-
 There may be more than one correct answer; select all correct equations.
 
 (Reminder: p \oplus q=p\bar{q} +\bar{p}qp⊕q=pqˉ+pˉq. Think: p \oplus pp⊕p = what? p \oplus \bar{p}p⊕ pˉ= what?)
