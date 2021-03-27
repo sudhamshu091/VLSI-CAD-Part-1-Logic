@@ -1,6 +1,6 @@
 1.
 Question 1
-Problem 1: Working with Shannon Cofactors
+Problem 1: Working with Shannon Cofactors 
 Let Boolean function F(x,y,z,w) = (xy + \bar{x}z) \oplus wF(x,y,z,w)=(xy+ xˉz)⊕w.
 Tell us whether each of the following Boolean equations involving Shannon Cofactors of function F(~)F( ) are true or false. Please select all correct answers.
 (Reminder: a⊕b=ab¯+a¯b; think carefully about what equations like (Boolean stuff) \oplus⊕1 and (Boolean stuff) \oplus⊕0 can simplify to.)
