@@ -12,7 +12,7 @@ Question 2
 Problem 1: Working with shannon cofactors - 2
 This question is a continuation of Problem 1.
 Ans:Fywˉ=x+xˉz
-3.
+3. 
 Question 3
 Problem 2: Alternative Shannon Expansion Formulas
 There are other ways of representing the Shannon Expansion theorem. The version we gave you – F(x_1, \ldots x_i, \ldots x_n) = x_i \bullet F(x_i=1) + \bar{x_i} \bullet F(x_i=0)F(x 
