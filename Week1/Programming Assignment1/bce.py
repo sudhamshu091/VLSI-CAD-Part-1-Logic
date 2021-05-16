@@ -54,6 +54,7 @@ class BCE(object):
 Usage = """\
 USAGE: {} COMMAND_FILE
 """
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         solutionDir = "BCESolutions"
