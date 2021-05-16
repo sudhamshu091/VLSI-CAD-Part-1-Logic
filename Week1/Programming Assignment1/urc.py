@@ -7,6 +7,7 @@ import pcn
 Usage = """\
 USAGE: {} FILE
 """
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         numVars, cubes = pcn.parse(sys.argv[1])
