@@ -19,6 +19,7 @@ class BCE(object):
             "p": self.write_pcn,
             "q": self.quit
         }
+
         self.done = False
 
     def process(self, commandFilePath):
