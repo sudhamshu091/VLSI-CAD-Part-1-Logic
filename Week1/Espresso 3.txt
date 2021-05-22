@@ -2,7 +2,7 @@
  .ilb io1 io0 init swr mack
  .ob wait minit mrd sack mwr dli
  .type fr
- .kiss
+ .kiss 
  --1-- - init0 110000
  --1-- init0 init0 110000
  --0-- init0 init1 110000
