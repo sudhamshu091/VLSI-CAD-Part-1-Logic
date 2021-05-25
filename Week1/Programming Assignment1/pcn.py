@@ -8,7 +8,7 @@ def parse(filePath):
             numVars = int(next(lines))
             cubeCount = int(next(lines))
             cubes = [None]*cubeCount
-            
+             
             for i in range(cubeCount):
                 line = next(lines)
                 cubes[i] = tuple(islice(map(int, line.split()), 1, None))
