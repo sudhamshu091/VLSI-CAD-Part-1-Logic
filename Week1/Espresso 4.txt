@@ -4,7 +4,7 @@ i 15
 	CacheOp<3> CacheOp<2> CacheOp<1> CacheOp<0>
 	userKernel<0> Protection<1> Protection<0>
 	cacheState<1> cacheState<0> PageDirty<0>
-	WriteCycleIn<0>
+	WriteCycleIn<0> 
 .ob CacheBusy<0> dataMayBeValid<0> dataIsValid<0>
 	WriteCycleOut<0>
 .symbolic CacheOp<6> CacheOp<5> CacheOp<4> CacheOp<3>
