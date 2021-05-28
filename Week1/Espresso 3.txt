@@ -1,4 +1,4 @@
-.mv 8 5 -10 -10 6
+ .mv 8 5 -10 -10 6
  .ilb io1 io0 init swr mack
  .ob wait minit mrd sack mwr dli
  .type fr
