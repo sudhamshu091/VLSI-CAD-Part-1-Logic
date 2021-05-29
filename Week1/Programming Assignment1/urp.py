@@ -24,7 +24,7 @@ def compose(func_1, func_2):
 
 def complement_cube(cube):
     return tuple((-v,) for v in cube)
-
+ 
 def all_max(values, key=None):
     maxTotal = max(values, key=key)
     return (v for v in values if key(v) == key(maxTotal))
